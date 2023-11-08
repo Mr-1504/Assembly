@@ -36,25 +36,22 @@ enter:
         lea dx, s2
         int 21h   
         
+        mov cx, 0
         mov bx, 0
         mov ax, 0 
-congtiep: 
-               
+congtiep:                   
         add ax, bx
         inc bx 
         cmp bx, a
         jg ok
         jmp congtiep
 ok:           
-        mov a, ax  
         mov bx, 10
 chia:   
-        mov dx, 0   
-        mov ax, a
+        mov dx, 0 
         div bx 
         push dx  
         inc cl  
-        mov a, ax
         cmp al, 0
         je inra
         jmp chia          
@@ -63,9 +60,7 @@ inra:
         mov ah, 2 
         add dl, 48  
         int 21h
-        sub cl, 1
-        cmp cl, 0
-        jg inra 
+        loop inra 
          
         mov ah, 4ch
         int 21h
