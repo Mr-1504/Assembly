@@ -6,9 +6,10 @@
     s2 db 10, 13, 'Nhap so chia: $'
     s3 db 10, 13, 'ket qua: $'  
     s4 db 10, 13, 'so chia khong hop le!$' 
-    s5 db 10, 13, 'CO DU!$'
+    s5 db 10, 13, 'du: $'
     a  dw 0
-    b  dw 0
+    b  dw 0   
+    c  dw 0
 .code 
     main proc
         mov ax, @data
@@ -61,23 +62,16 @@
         mov ax, a 
         mov cx, b
         div cx    
-        mov a, ax
         mov cl, 0  
-        cmp dx, 0
-        je chia
-        mov ah, 9
-        lea dx, s5
-        int 21h          
+        mov c, dx         
         
     chia:
-        mov dx, 0        
-        mov ax, a
+        mov dx, 0  
         div bx
         push dx 
         inc cl
         cmp ax, 0
-        je tiep
-        mov a, ax  
+        je tiep    
         jmp chia
         
         
@@ -90,9 +84,30 @@
         add dl, 48
         mov ah, 2
         int 21h
-        sub cl, 1
-        cmp cl, 0
-        jg inra    
+        loop inra  
+        cmp c, 0     
+        je ketthuc
+        
+        mov ax, c
+    chiadu:    
+        mov dx, 0
+        div bx
+        push dx
+        inc cl
+        cmp ax, 0
+        je xuatdu
+        jmp chiadu
+        
+    xuatdu:     
+        mov ah, 9
+        lea dx, s5
+        int 21h
+    du:    
+        pop dx
+        add dl, 48
+        mov ah, 2
+        int 21h
+        loop du
         jmp ketthuc
      tbao:
         mov ah, 9
