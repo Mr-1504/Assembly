@@ -74,7 +74,6 @@
         je tiep    
         jmp chia
         
-        
     tiep:
         mov ah, 9
         lea dx, s3  
