@@ -14,7 +14,7 @@
         lea dx, s1
         int 21h
         
-        mov cl, 0
+        mov cx, 0
         mov bx, 10
 nhap:        
         mov ah, 1
@@ -50,9 +50,7 @@ inra:
         mov ah, 2 
         add dl, 48  
         int 21h
-        sub cl, 1
-        cmp cl, 0
-        jg inra 
+        loop inra 
          
         mov ah, 4ch
         int 21h
