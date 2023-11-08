@@ -62,7 +62,7 @@
         mov ax, a 
         mov cx, b
         div cx    
-        mov cl, 0  
+        mov cx, 0  
         mov c, dx         
         
     chia:
