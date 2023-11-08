@@ -1,7 +1,7 @@
 .model small
 .stack
 .data
-    s1 db 'Nhap: $'
+    s1 db 'Nhap xau, nhap 0 de dung: $'
     s2 db 10, 13, 'Xau vua nhap: $'
     s3 db 10, 13, 'So so chan: $'
     s  db 100 dup(?) 
