@@ -53,17 +53,16 @@
     enter2: 
         mov ax, b
         add a, ax
-        mov cl, 0            
+        mov cx, 0                            
+        mov ax, a          
         
     chia:
-        mov dx, 0        
-        mov ax, a
+        mov dx, 0 
         div bx
         push dx 
         inc cl
         cmp ax, 0
         je tiep
-        mov a, ax  
         jmp chia
         
         
@@ -76,9 +75,7 @@
         add dl, 48
         mov ah, 2
         int 21h
-        sub cl, 1
-        cmp cl, 0
-        jg inra  
+        loop inra  
         
         mov ah, 4ch
         int 21h
