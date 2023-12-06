@@ -6,7 +6,7 @@
     s3 db 10, 13, 'Xau rong!$'  
     s  db 100 dup(?)
 .code
-    main proc
+    Truong_Van_minh proc
         mov ax, @data
         mov ds, ax
         
@@ -44,6 +44,6 @@
     ketthuc:
         mov ah, 4ch
         int 21h
-    main endp
+    Truong_Van_minh endp
 end    
                      

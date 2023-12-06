@@ -5,7 +5,7 @@
     s2 db 10, 13, 'Chuyen doi sang nhi phan: $'
     a  dw 0
 .code
-    main proc
+    Truong_Van_minh proc
         mov ax, @data
         mov ds, ax
         
@@ -53,7 +53,7 @@
         
         mov ah, 4ch
         int 21h
-    main endp
+    Truong_Van_minh endp
 end    
         
                    

@@ -13,7 +13,7 @@
      t    dw   0
      t1   dw   0
 .code
-     main proc
+     Truong_Van_minh proc
           mov ax, @data
           mov ds, ax
           
@@ -96,5 +96,5 @@ tiep:
           mov ah, 4ch
           int 21h
           
-          main endp
-     end main
+    Truong_Van_minh endp
+end Truong_Van_minh

@@ -6,7 +6,7 @@
        s1  db 10, 13, 'chuoi vua nhap: $'
        str db 100 dup ('$')
 .code
-main proc   
+    Truong_Van_minh proc   
         mov ax, @data
         mov ds, ax
        
@@ -43,5 +43,5 @@ main proc
                 
         mov ah, 4ch
         int 21h
-    main endp
-end main
+    Truong_Van_minh endp
+end Truong_Van_minh

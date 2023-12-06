@@ -12,7 +12,7 @@
     d  dw 0  
     e  dw 0
 .code
-    main proc
+    Truong_Van_minh proc
            mov ax, @data
            mov ds, ax
            
@@ -74,7 +74,7 @@ enter:
            int 21h
            mov ah, 4ch
            int 21h
-        main endp
-    end
+    Truong_Van_minh endp
+end
            
            

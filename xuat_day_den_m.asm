@@ -4,7 +4,7 @@
     nhap db 'Nhap ki tu: $'
     xuong db 10,13,'$'
 .code
-    main proc  
+    Truong_Van_minh proc  
         MOV ax, @data
         MOV ds, ax
                   
@@ -43,5 +43,5 @@
         MOV ah, 4ch
         INT 21h
         
-    main endp
-end main
+    Truong_Van_minh endp
+end Truong_Van_minh
