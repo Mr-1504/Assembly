@@ -24,7 +24,7 @@
         mov al, cl
         div bl     
         add al, 48
-        add ah, 48
+        add ah, 48 
         mov s[3], al
         mov s[4], ah
         
