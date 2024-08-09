@@ -21,7 +21,7 @@
         lea dx, s1
         int 21h
         
-        mov bx, 10   
+        mov bx, 10      
 
     nhap1:        
         mov ah, 1
