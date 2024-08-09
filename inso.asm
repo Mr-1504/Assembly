@@ -11,7 +11,7 @@
         
         mov ah, 9
         lea dx, s1
-        int 21h
+        int 21h    
         
         mov cx, 0
         mov bl, 10
